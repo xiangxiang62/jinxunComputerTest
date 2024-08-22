@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jinxun.mapper.OrderMapper">
+
+        <resultMap id="BaseResultMap" type="com.jinxun.project.model.entity.OrderTable">
+                <id property="id" column="id" jdbcType="INTEGER"/>
+                <result property="order_no" column="order_no" jdbcType="INTEGER"/>
+                <result property="order_type" column="order_type" jdbcType="TINYINT"/>
+                <result property="title" column="title" jdbcType="VARCHAR"/>
+                <result property="content" column="content" jdbcType="VARCHAR"/>
+                <result property="handle_dept_id" column="handle_dept_id" jdbcType="INTEGER"/>
+            <result property="create_user_id" column="create_user_id" jdbcType="INTEGER"/>
+                <result property="create_time" column="create_time" jdbcType="TIMESTAMP"/>
+                <result property="fenpai_time" column="fenpai_time" jdbcType="TIMESTAMP"/>
+                <result property="is_overdue" column="is_overdue" jdbcType="TINYINT"/>
+        </resultMap>
+
+        <sql id="Base_Column_List">
+                id,
+            order_no,
+            order_type,
+            title,
+            content,
+            handle_dept_id,
+            create_time,
+            fenpai_time,
+            is_overdue
+        </sql>
+
+</mapper>
